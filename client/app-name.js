@@ -1,5 +1,3 @@
-// TODO: cleanup
-
 // React & Redux
 import React from 'react';
 import {render} from 'react-dom';
@@ -11,9 +9,7 @@ import css from './styles/app.scss';
 
 // Components
 import App from './components/App';
-import NewsFeed from './components/NewsFeed';
-import Post from './components/Post';
-import HoodPage from './components/HoodPage';
+import MainFeed from './components/MainFeed';
 
 import store, {history} from './store';
 
@@ -24,9 +20,7 @@ const router = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={NewsFeed}></IndexRoute>
-        <Route path="/2016/:url" component={Post}></Route>
-        <Route path="/neighborhoods/:url" component={HoodPage}></Route>
+        <IndexRoute component={MainFeed}></IndexRoute>
       </Route>
     </Router>
   </Provider>

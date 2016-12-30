@@ -1,5 +1,3 @@
-// TODO: cleanup
-
 // Main is really just a presentational component
 import React from 'react';
 import {Link} from 'react-router';
@@ -11,13 +9,7 @@ const Main = React.createClass({
     return (
       <div>
         <header className="header">
-          <div className="container">
-            <Link onClick={this.props.clickedLogo} to="/"><span className="header--logo">Haroldline</span></Link>
-            <nav className="header--navigation">
-              <Link onClick={this.props.clickedLogo} className="header--nav-item" to="/">News</Link>
-              <a className="header--nav-item" href="#">Events</a>
-            </nav>
-          </div>
+          <h1>My App</h1>
         </header>
         {React.cloneElement(this.props.children, this.props)}
       </div>
